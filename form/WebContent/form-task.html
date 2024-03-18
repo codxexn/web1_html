@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Hahmlet:wght@300&family=Jua&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="https://sign.alba.co.kr/favicon.ico" type="image/x_icon">
+
+<style>
+*{
+	font-family: 'Gasoek One', sans-serif;
+	font-family: 'Hahmlet', serif;
+	font-family: 'Jua', sans-serif;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+h1{
+	text-align: center;
+}
+
+h3{
+	text-align: center;
+	color: gray;
+}
+
+h4{
+	text-align: center;
+	color: gray;
+}
+
+h5{
+	color: gray;
+}
+
+table {
+      border: 1px solid gray;
+      border-collapse: collapse;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      width: 700px;
+   }
+   
+.cell_padding{
+	padding: 0.5em;
+}
+
+
+td{
+	color: gray;
+}
+
+text{
+	width: 500px;
+	height: 20px;
+}
+
+button{
+	width: 30px;
+	height: 30px;
+}
+
+input{
+	 border: 1px solid white;
+}
+
+</style>
+
+</head>
+<body>
+<img src ="alba_icon1.png">
+
+<form name ="joinFormTask">
+<h1>개인회원가입</h1>
+	
+	<table border="1">
+	
+			<div class="checkbox_group">
+				<tr>
+					<td class = cell_padding>
+						<input type="checkbox" id="check_all">
+						<label for="check_all">이용약관에 전체 동의</label>
+					</td>
+				</tr>
+				<tr>
+					<td class = cell_padding>
+					<input type="checkbox" id="check_1" class="normal">
+					<label for="check_1"><font color="red">[필수]</font>만 15세 이상입니다.</label>
+					<br>
+					<input type="checkbox" id="check_2" class="normal">
+					<label for="check_2"><font color="red">[필수]</font>서비스 이용약관 동의</label>
+					<br>
+					<input type="checkbox" id="check_3" class="normal">
+					<label for="check_3"><font color="red">[필수]</font>개인정보 수집 및 이용 동의</label>
+					<br>
+					<input type="checkbox" id="check_4" class="normal">
+					<label for="check_4"><font color="gray">[선택]개인정보 수집 및 이용 동의</font></label>
+					<br>
+					<input type="checkbox" id="check_5" class="normal">
+					<label for="check_5"><font color="gray">[선택]광고성 정보 수신 동의(SMS/MMS)</font></label>
+					<br>
+					<input type="checkbox" id="check_6" class="normal">
+					<label for="check_6"><font color="gray">[선택]광고성 정보 수신 동의(이메일)</font></label>
+					<br>
+					</td>
+				</tr>		
+			</div>
+	</table>
+		
+		<div style="color:gray"><h4>※개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있으며 동의 거부 시에는 회원가입이 불가합니다.</h4></div>
+		<div>
+		<p>
+			<table>
+				<tr>
+					<td><h5><sup>아이디(4~15자 영문, 숫자)</sup></h5></td>
+					<td><input type="text" name="userId" required autocomplete="none"></td>
+				</tr>
+			</table>
+		</p>
+		</div>
+		<div>
+		<p>
+			<table>
+				<tr>
+					<td><h5><sup>비밀번호 8~15자의 영문/숫자 또는 특수문자 조합</sup></h5></td>
+					<td><input type="text" name="userPassword"></td>
+					<td><h3>표시</h3></td>
+				</tr>
+				<tr>
+					<td><h5><sup>비밀번호 재입력</sup></h5></td>
+					<td><input type="text" name="userPasswordCheck"></td>
+				</tr>
+			</table>
+		</p>
+		</div>
+		<div>
+		<p>
+			<table>
+				<tr>
+					<td><h5><sup>이름</sup></h5></td>
+					<td><input type="text" name="userName"></td>
+				</tr>
+			</table>
+		</p>
+		</div>
+		<div>
+		<p>
+			<table>
+				<tr>
+					<td><h5><sup>생년월일 8자리 입력, 성별(선택)</sup></h5></td>
+					<td><input type="text" name="userBirth"></td>
+					<td><label><input type="radio" name="gender" value="남">남</label></td>
+					<td><label><input type="radio" name="gender" value="여">여</label></td>
+				</tr>
+			</table>
+		</p>
+		</div>
+		<div>
+		<p>
+			<table>
+				<tr>
+					<td><h5><sup>이메일</sup></h5></td>
+					<td><input type="text" name="userEmail"></td>
+				</tr>
+			</table>
+		</p>
+		</div>
+		<div>
+		<p>
+			<table>
+				<tr>
+					<td><h5><sup>휴대폰('-'없이 입력하세요.)</sup></h5></td>
+					<td><input type="text" name="userPhone"></td>
+					<td><input type="button" value="인증번호 요청"></td>
+				</tr>
+				<tr>
+					<td><h5><sup>인증번호</sup></h5></td>
+					<td><input type="text" name="verificationCode"></td>
+					<td><input type="button" value="확인"></td>
+				</tr>
+			</table>
+		</p>
+		</div>
+		<div>
+		<p style="text-align:center">
+			<table>
+			<caption><h3 style="color:black">개인정보 유효기간 선택&nbsp;<img style="width: 20px; color: gray" src ="question.png"></h3></caption>
+				<tr style="text-align:center"">
+				<td><label><input type="radio" name="availablePeriod" value="1년">1년</label></td>
+				<td><label><input type="radio" name="availablePeriod" value="3년">3년</label></td>
+				<td><label><input type="radio" name="availablePeriod" value="회원탈퇴시">회원탈퇴시</label></td>
+				</tr>
+			</table>
+		</p>
+		</div>
+		<div>
+		<p style="text-align:center">
+		<input style="background-color:yellow; border-radius: 6px; font-size:1.5rem; width: 500px; height: 50px;" type= submit value="가입하기" >
+		</p>
+		</div>
+</form>
+</body>
+</html>
