@@ -230,9 +230,174 @@ enc - Workspace - UTF-8
 CSS HTML JSP 모두 UTF-8 로 APPLY
 
 Servers - 9.0 Next - Finish - 클릭하고 재생
-
 ```
 
+<br><br>
 
+## 📝 Day02
+> ### html
+> Webcontent에 생성
 
+<br>
 
+> #### HTML의 요소
+```html
+  <p> ¹
+    You are the best ²
+  </p> ³
+```
+　¹　**여는 태그(Opening tag)**: 요소의 이름(p)과 열고 닫는 꺽쇠 괄호로 구성된다.  
+　²　**내용(Content)**: 요소의 내용이며, 단순한 텍스트를 의미한다.  
+　³　**닫는 태그(Closing tag)**: 요소의 이름 앞에 슬래시(/)가 있다.
+
+<br>
+
+📌 **html 주석**: <!-- 주석 -->: Ctrl + Shift + /
+📌 **<> 태그**: 연 것은 무조건 닫아야 한다. single tag 는 안 닫기도 한다.
+
+<br><br>
+
+## 📝 Day03
+> ### HTML 요소의 종류
+
+<br>
+
+> #### 블럭 요소
+> **p, h, ul, ol, div, form, table,...** 등
+- 코드 상에 한 줄로 이어 써도 화면 상에서는 앞 뒤 요소 사이에 새로운 줄을 만들어서 나타난다.
+```html
+<p>apple</p><p>banana</p>
+```
+⬇️ **화면**
+```
+apple
+banana
+```
+- 영역이 정확히 구분되어 있기 때문에, width, height 속성을 수정할 수 있다.
+- margin-top, margin-bottom 속성도 잘 적용된다.
+- padding-top, padding-bottom 속성도 잘 적용된다.
+- div 태그
+  - 다른 HTML 요소들을 하나로 묶는 데 사용되는 대표적인 블록 요소이다.
+  - 주로 여러 요소들의 스타일을 한 번에 적용하기 위해 div 태그를 사용한다.
+
+<br>
+
+> #### 인라인 요소
+> **span, a, img, strong, em, ...** 등
+- 새로운 줄을 만들지 않고 작성한 단락 내에 나타난다.
+- 안에 있는 내용만큼만 영역을 차지한다.
+```html
+<strong>apple</strong><em>banana</em>
+```
+⬇️ **화면**
+```
+applebanana
+```
+
+📌 **인라인 요소를 중간 정렬하고 싶으면 블록 요에 넣고 센터 정렬**
+
+- 영역이 불분명하기 때문에 width와 height를 임의로 부여할 수 없다(img 태그 제외)
+- margin-top, margin-bottom 속성도 적용되지 않는다.
+- padding-top, padding-bottom 속성도 적용되지 않는다.
+- span 태그
+  - 텍스트의 특정 부분을 묶는 데 자주 사용되는 요소이다.
+  - 주로 텍스트의 특정 부분에 따로 다른 스타일을 적용하기 위해 사용한다.
+
+<br>
+
+> #### 인라인 블록 요소
+> **button, input, select, ...** 등
+- inline 요소와 동일한 영역(내용만큼)을 가지지만 width와 height를 설정할 수 있다.
+- margin-top, margin-bottom 속성도 잘 적용된다.
+- padding-top, padding-bottom 속성도 잘 적용된다.
+
+<br>
+
+> #### format: 서식 태그
+```html
+    <br>: 줄바꿈
+    <p>: 문단(paragraph)
+    <b>, <strong>: 굵게(bold) ➡️ strong 사용 지향
+    <del>: 취소선
+    <ins>: 밑줄
+    <i><em>: 이태리체
+    <mark>: 형광펜
+    <sub>: 아래 첨자
+    <sup>: 위 첨자
+    <h#>: 제목(크기 키워줌, 숫자 작을수록 큼)
+    <a>: 하이퍼링크
+      <a href = "링크 주소" target = "_self": 현재 페이지/ "_blank": 새 페이지>
+    <q>: ""
+```
+
+<br>
+
+📌 **내용을 명령어로 인식하지 못하게 하는 문법**
+```html
+    &lt;: less than: <
+    &gt;: great than: >
+    &amp;: ampersand: &, and
+    &quot;: 인용하다, 전달하다: "
+    &nbsp;: 공백
+```
+
+<br>
+
+> #### list
+- **순서 없는 리스트**
+```html
+<ul>태그 안에 <li>태그 사용
+
+    <ul>
+      <li>텍스트1</li>
+      <li>텍스트2</li>
+      <li>텍스트3</li>
+    </ul>
+```
+- **순서 있는 리스트**
+```html
+<ol>태그 안에 <li>태그 사용
+
+    <ol>
+      <li>텍스트1</li>
+      <li>텍스트2</li>
+      <li>텍스트3</li>
+    </ol>
+```
+- **type 속성**: 1, A, a, i, I
+- **type 속성 사용 예시**
+```html
+  <ol type ="속성값" start ="시작값">
+```
+
+<br>
+
+> #### table
+```html
+    <table border="1" 표 선></table>
+    <th>: 표 가장 상단열(굵게, 가운데 정렬)
+    <tr>: 행
+    <td>: 열
+    <caption>: 표 제목
+```
+
+<br>
+
+> #### head
+```html
+<style>
+  td {
+    text-align:center ➡️ 중앙 정렬
+    font-weight:bold ➡️ 글씨체 두껍게
+  }
+  
+  table {
+    width: 30%; ➡️ 표 가로길이 화면기준 30%
+    border: 1px solid black; ➡️ 표 테두리 단선 블랙
+    border-collapse: collapse;
+    			- collapse : 서로 이웃하는 테이블이나 셀의 테두리선을 겹쳐서 표현 합니다.
+    			- separate : 기본값으로 서로 이웃하는 테이블이나 셀의 테두리선을 분리시켜 표현 합니다.
+    margin: 0 auto; ➡️ 표 바깥여백 상하 0 좌우 자동
+  }
+</style>
+```
